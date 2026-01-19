@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>The bread is delicious</title>
+        <link rel="icon" type="image/x-icon" href="./bread.ico">
+        <style>
+            @font-face {
+                font-family: 'clearsans-regular';
+                src: url('./clear-sans/ClearSans-Regular.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-italic';
+                src: url('./clear-sans/ClearSans-Italic.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-bold';
+                src: url('./clear-sans/ClearSans-Bold.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-bolditalic';
+                src: url('./clear-sans/ClearSans-BoldItalic.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-light';
+                src: url('./clear-sans/ClearSans-Light.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-thin';
+                src: url('./clear-sans/ClearSans-Thin.ttf');
+            }    
+            @keyframes mymove {
+                from {height: 690px;}
+                to {height: 2069px;}
+            }
+   
+            body{
+                background-color: linen;
+                font-family: 'clearsans-regular';
+                margin: 0px;
+            }
+            .center{
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+                align-items: center;     /* Centers vertically */
+                height: 100vh;
+            }
+            .content{
+                border: 03px double orange;
+                width: 690px;
+                height: 690px;
+                overflow:auto;
+
+                /* animation: mymove 3s; */
+            }
+
+            li{
+                padding: 2px;
+                font-size: 24px;
+                color: blue;                
+                color: linen;
+                -webkit-text-stroke: 1px orange;
+            }
+            ol{
+                margin-left: 16px;
+                margin-top: 8px;
+            }
+            a {
+                color: blue;
+                -webkit-text-stroke: 0px orange;
+            }
+            a:visited{
+                color: rgb(120, 148, 240);
+            }
+            .updated {
+                font-family: 'clearsans-italic';
+                color: rgba(0, 0, 0, 0.5);
+            }
+            .vbox{
+                display: flex;
+                flex-direction: column;
+            }
+            .hbox{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+            }
+            .spacer{
+                justify-content: space-between;
+            }
+            .hex{
+                position: absolute;
+                right: 24px;
+                top: -180px;
+            }
+            .title{
+                font-size: 38px;
+                font-family: 'clearsans-thin';
+                text-decoration: none;
+                color: orange;
+            }
+            .title:visited{
+                text-decoration: none;
+                color: orange;
+            }
+            .wrapper-hex{
+                position: relative;
+            }
+        </style>
+    </head>
+    <body class="center">
+        <div class="vbox">
+            <div class="hbox spacer">
+                <a href="home.html" class="title">2023 Recap</a>
+            </div>
+            <div class="content vbox">
+
+            </div>
+        </div>
+    </body>
+</html>
