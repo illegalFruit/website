@@ -27,9 +27,15 @@
             @font-face {
                 font-family: 'clearsans-thin';
                 src: url('./font/clear-sans/ClearSans-Thin.ttf');
-            }           
+            }    
+            html{
+                background-color: #faf0e6;
+                opacity: 1;
+                background-image:  radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, #faf0e6 1.4000000000000001px);
+                background-size: 56px 56px;
+                background-position: 0 0,28px 28px;
+            }
             body{
-                background-color: linen;
                 font-family: 'clearsans-regular';
                 margin: 0px;
             }
@@ -40,6 +46,7 @@
                 height: 100vh;
             }
             .content{
+                background-color: linen;
                 border: 03px double red;
                 width: 690px;
                 height: 690px;
@@ -138,6 +145,7 @@
             </div>
             <div class="content vbox">
                 <div class="entry"><a href="/blog">A Blog</a><div class="date">01/19/26</div></div>
+                <div class="entry plain"><a class='unavailable' href="#">What <i>is</i> a Profile?</a><div class="date">-/-/-</div></div>
                 <div class="entry"><a class='unavailable' href="#">2025 Recap</a><div class="date">-/-/-</div></div>
                 <div class="entry plain"><a class='unavailable' href="#">Internet Friends</a><div class="date">-/-/-</div></div>
                 <div class="entry"><a class='unavailable' href="#">Still Thinking of Them (Videogames)</a><div class="date">-/-/-</div></div>
