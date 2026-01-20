@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>The bread is delicious</title>
-        <link rel="icon" type="image/x-icon" href="./bread.ico">
+        <link rel="icon" type="image/x-icon" href="./img/bread.ico">
         <style>
             @font-face {
                 font-family: 'clearsans-regular';
@@ -26,9 +27,13 @@
             @font-face {
                 font-family: 'clearsans-thin';
                 src: url('./font/clear-sans/ClearSans-Thin.ttf');
-            }           
+            }    
+            html{
+                background-color: #e5e5f7;
+                opacity: 1;
+                background: repeating-linear-gradient( -45deg, blue, blue 3px, #e5e5f7 3px, #e5e5f7 60px );
+            }
             body{
-                background-color: linen;
                 font-family: 'clearsans-regular';
                 margin: 0px;
             }
@@ -39,12 +44,12 @@
                 height: 100vh;
             }
             .content{
+                background-color: linen;
                 border: 03px double blue;
                 width: 690px;
                 height: 690px;
                 overflow:auto;
-                max-height: 690px;
-                max-width: 690px;
+                
             }
             li{
                 padding: 2px;
@@ -53,13 +58,20 @@
                 color: linen;
                 -webkit-text-stroke: 1px blue;
             }
-            ol{
-                margin-left: 16px;
+            .date{
                 margin-top: 8px;
+                -webkit-text-stroke: 1px rgb(255, 132, 132);
+                font-size: 16px;
+                color: linen;
+                margin: 4px;
             }
             a {
                 color: blue;
                 -webkit-text-stroke: 0px blue;
+                text-decoration: none;
+                margin-left: 30px;
+                font-size: 30px;
+                margin-right: auto
             }
             a:visited{
                 color: rgb(120, 148, 240);
@@ -70,7 +82,7 @@
             }
             .vbox{
                 display: flex;
-                flex-direction: column;
+                flex-direction: column; 
             }
             .hbox{
                 display: flex;
@@ -86,10 +98,12 @@
                 top: -180px;
             }
             .title{
-                font-size: 38px;
+                font-size: 42px;
                 font-family: 'clearsans-thin';
                 text-decoration: none;
                 color: blue;
+                position: relative;
+                margin-left: 0px;
             }
             .title:visited{
                 text-decoration: none;
@@ -98,23 +112,47 @@
             .wrapper-hex{
                 position: relative;
             }
+            .unavailable, .unavailable:visited{
+                color: grey;
+                text-decoration: none;
+                font-family: 'clearsans-thin';
+            }
+            .entry{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(255, 236, 210);
+                justify-content: flex-start;
+            }
+            .plain{
+                background-color: transparent;
+            }
+            .tag{
+                font-family: 'clearsans-thin';
+                font-size: 16px;
+                margin: 4px;
+                padding: 2px;
+                color: rgb(10, 3, 3);
+            }
+            .text{
+                font-size: 18px;
+                margin: 10px;
+            }
         </style>
     </head>
     <body class="center">
         <div class="vbox">
             <div class="hbox spacer">
-                <a href="home.html" class="title">Blog</a>
+                <a href="index" class="title">Blog</a>
+                <div class="updated">last updated today</div>
             </div>
             <div class="content vbox">
-                Oh boy, what to type? What to say? To the magnificant audience of all but none. I've wanted to have a 'blog' for a while now. But haven't due to one reason for another. But thats changed and now I do. 
-
-                I struggled wondering what it'd even be about, not a journal but what else is interesting? so ill populate it with ideas and knowledge(of me)
-
-                some blogs are so cool and i could never compete 
-
-                hers a link to the inspiration and design of a website that just does what its suppose to 
-
-                
+                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            </div>
+            <div class="wrapper-hex">
+                <div class="hex">
+                    <img src="" style="width:169px;height:169px;">
+                </div>
             </div>
         </div>
     </body>
