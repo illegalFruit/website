@@ -69,6 +69,7 @@
                 font-size: 16px;
                 color: linen;
                 margin: 4px;
+                margin-left: auto;
             }
             a {
                 color: blue;
@@ -76,7 +77,6 @@
                 text-decoration: none;
                 margin-left: 30px;
                 font-size: 30px;
-                margin-right: auto
             }
             a:visited{
                 color: rgb(120, 148, 240);
@@ -124,16 +124,7 @@
                 align-items: center;
                 background-color: rgb(255, 236, 210);
                 justify-content: flex-start;
-            }
-            .plain{
-                background-color: transparent;
-            }
-            .tag{
-                font-family: 'clearsans-thin';
-                font-size: 16px;
-                margin: 4px;
-                padding: 2px;
-                color: rgb(10, 3, 3);
+                white-space: nowrap;
             }
             .footer{
                 width: 400px;
@@ -156,11 +147,6 @@
                 margin-left: 30px;
                 padding-bottom: 10px;
             }
-            /* .discord-wrapper:not( :hover ){
-                animation: reverse-move-up .5s;
-                :nth-child(1){animation: reverse-hide .5s;}
-                :nth-child(2){animation: reverse-show .5s;} 
-            } */
             .discord-wrapper:hover{
                 animation: move-up .5s forwards;
                 :nth-child(1){animation: hide .5s forwards;}
@@ -187,19 +173,32 @@
             @keyframes reverse-hide {
             0% {opacity: 0%}
             100% {opacity: 100%}}
-        .wwrapper{
-            display: inline-block;
+        .tag-wrapper{
+            display: grid;
             position: relative;
+            grid-template-columns: auto auto auto;
+            gap: 2px;
+            align-self: end;
         }
-        .thing{
-            position: absolute;
-            color: black;
-            top: -08px;
+        .tag-base{
             border-radius: 15px;
             font-size: 12px;
-            width: 40px;
             text-align: center;
+            cursor: default;
+        }
+        .tag-wip{
+            width: 40px;
+            color: black;
             background-color: rgba(255, 166, 0, 0.589);
+        }
+        .tag-edit{
+            width: 20px;
+            color: black;
+            background-color: rgba(255, 166, 0, 0.589);
+        }
+        /* Apply plain to every nth element */
+        .entry:nth-child(even){
+            background-color: transparent;
         }
         </style>
     </head>
@@ -211,15 +210,36 @@
                 <div class="updated">last updated today</div>
             </div>
             <div class="content vbox">
-                <div class="entry"><a href="/blog">Why Blog<div class="wwrapper"><div class="thing">WIP</div></div></a><div class="date">01/19/26</div></div>
-                <div class="entry plain"><a class='unavailable' href="/">What <i>is</i> a Profile?</a><div class="date">-/-/-</div></div>
-                <div class="entry"><a class='unavailable' href="/">2025 Recap</a><div class="date">-/-/-</div></div>
-                <div class="entry plain"><a class='unavailable' href="/">Internet Friends</a><div class="date">-/-/-</div></div>
-                <div class="entry"><a class='unavailable' href="/">Still Thinking of Them (Videogames)</a><div class="date">-/-/-</div></div>
-                <div class="entry plain"><a class='unavailable' href="/">2024 Recap</a><div class="date">-/-/-</div></div>
-                <div class="entry"><a class='unavailable' href="/">2023 Recap</a><div class="date">-/-/-</div></div>
-                <div class="entry plain"><a class='unavailable' href="/">Talk, Talk, Talk</a><div class="date">-/-/-</div></div>
-                <div class="entry"><a class='unavailable' href="/">It's a Process</a><div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">2023 Recap</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a href="/blog">Why Blog</a>
+                    <div class="tag-wrapper">
+                        <!-- <div class="tag-base tag-wip">WIP</div> -->
+                    </div>
+                    <div class="date">01/19/26</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">What <i>is</i> a Profile?</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">2025 Recap</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">Internet Friends</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">Still Thinking of Them (Videogames)</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">2024 Recap</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">Talk, Talk, Talk</a>
+                    <div class="date">-/-/-</div></div>
+                <div class="entry">
+                    <a class='unavailable' href="/">It's a Process</a>
+                    <div class="date">-/-/-</div></div>
             </div>
             <div class="wrapper-hex">
                 <div class="hex">
