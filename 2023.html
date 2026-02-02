@@ -1,74 +1,80 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>The bread is delicious</title>
-        <link rel="icon" type="image/x-icon" href="./bread.ico">
+        <title>The Bread is Delicious</title>
+        <link rel="icon" type="image/x-icon" href="./img/bread.ico">
         <style>
             @font-face {
                 font-family: 'clearsans-regular';
-                src: url('./clear-sans/ClearSans-Regular.ttf');
+                src: url('./font/clear-sans/ClearSans-Regular.ttf');
             }
             @font-face {
                 font-family: 'clearsans-italic';
-                src: url('./clear-sans/ClearSans-Italic.ttf');
+                src: url('./font/clear-sans/ClearSans-Italic.ttf');
             }
             @font-face {
                 font-family: 'clearsans-bold';
-                src: url('./clear-sans/ClearSans-Bold.ttf');
+                src: url('./font/clear-sans/ClearSans-Bold.ttf');
             }
             @font-face {
                 font-family: 'clearsans-bolditalic';
-                src: url('./clear-sans/ClearSans-BoldItalic.ttf');
+                src: url('./font/clear-sans/ClearSans-BoldItalic.ttf');
             }
             @font-face {
                 font-family: 'clearsans-light';
-                src: url('./clear-sans/ClearSans-Light.ttf');
+                src: url('./font/clear-sans/ClearSans-Light.ttf');
             }
             @font-face {
                 font-family: 'clearsans-thin';
-                src: url('./clear-sans/ClearSans-Thin.ttf');
+                src: url('./font/clear-sans/ClearSans-Thin.ttf');
             }    
-            @keyframes mymove {
-                from {height: 690px;}
-                to {height: 2069px;}
+            html{
+
+
             }
-   
             body{
-                background-color: linen;
                 font-family: 'clearsans-regular';
                 margin: 0px;
+                padding: 69px 0px 69px 0px;
             }
             .center{
-                display: flex;
-                justify-content: center; /* Centers horizontally */
-                align-items: center;     /* Centers vertically */
-                height: 100vh;
+                /* display: flex;
+                justify-content: center;
+                align-items: center;     
+                min-height: 300vh; */
+                display: grid;
+                place-items: center;
             }
             .content{
+                background-color: rgb(255, 255, 225);
                 border: 03px double orange;
-                width: 690px;
-                height: 690px;
+                width: 800px;
                 overflow:auto;
-
-                /* animation: mymove 3s; */
             }
-
             li{
                 padding: 2px;
                 font-size: 24px;
-                color: blue;                
+                color: orange;                
                 color: linen;
                 -webkit-text-stroke: 1px orange;
             }
-            ol{
-                margin-left: 16px;
+            .date{
                 margin-top: 8px;
+                -webkit-text-stroke: 1px rgb(255, 132, 132);
+                font-size: 16px;
+                color: linen;
+                margin: 4px;
             }
             a {
-                color: blue;
+                color: orange;
                 -webkit-text-stroke: 0px orange;
+                text-decoration: none;
+                margin-left: 30px;
+                font-size: 30px;
+                margin-right: auto
             }
             a:visited{
-                color: rgb(120, 148, 240);
+                color: orange;
             }
             .updated {
                 font-family: 'clearsans-italic';
@@ -76,7 +82,7 @@
             }
             .vbox{
                 display: flex;
-                flex-direction: column;
+                flex-direction: column; 
             }
             .hbox{
                 display: flex;
@@ -92,10 +98,12 @@
                 top: -180px;
             }
             .title{
-                font-size: 38px;
+                font-size: 42px;
                 font-family: 'clearsans-thin';
                 text-decoration: none;
                 color: orange;
+                position: relative;
+                margin-left: 0px;
             }
             .title:visited{
                 text-decoration: none;
@@ -104,15 +112,114 @@
             .wrapper-hex{
                 position: relative;
             }
+            .unavailable, .unavailable:visited{
+                color: grey;
+                text-decoration: none;
+                font-family: 'clearsans-thin';
+            }
+            .entry{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(255, 236, 210);
+                justify-content: flex-start;
+            }
+            .plain{
+                background-color: transparent;
+            }
+            .tag{
+                font-family: 'clearsans-thin';
+                font-size: 16px;
+                margin: 4px;
+                padding: 2px;
+                color: rgb(10, 3, 3);
+            }
+            p{
+                font-size: 16px;
+                margin: 20px;
+                text-indent: 40px;
+            }
+            .img-left{
+                margin: 24px;
+                height: 300px;
+                width: 300px;
+                border: 3px double blue;
+            }
+            .float-right{
+                margin: 24px;
+                float: inline-end;
+                height: 300px;
+                width: 300px;
+                border: 3px double blue;
+            }
+            .img-center{
+                max-height: 300px;
+                max-width: 600px;
+                display: block;
+                border: 3px double blue;
+            }
+            p{
+                word-spacing: 6px;
+                text-align: justify;
+            }
+            .image-left{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px;
+                width: 400px;
+                float: inline-start;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);    
+            }
+            .image-right{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px;
+                width: 400px;
+                float: inline-end;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);  
+            }
+            .image-center{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px auto 30px auto;
+                width: 600px;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);
+            }
+            img{
+                border: 3px double blue;
+            }
         </style>
     </head>
     <body class="center">
         <div class="vbox">
             <div class="hbox spacer">
-                <a href="home.html" class="title">2023 Recap</a>
+                <a href="/" class="title">2023</a>
             </div>
             <div class="content vbox">
-
+                <p>Realized at some point a while ago, years, that life was going too fast and I couldn't recall a years worth of memories. So I started writing down things I did or deemed memorable. So here's 2023's. :)</p>
+                <table>
+                    <tr>
+                        <td>thing name</td>
+                        <td>comment?</td>
+                        <td>thumbs up/down/heart</td>
+                    </tr>
+                    <tr>
+                        <td>thing name</td>
+                        <td>comment?</td>
+                        <td>thumbs up/down/heart</td>
+                    </tr>
+                    <tr>
+                        <td>thing name</td>
+                        <td>comment?</td>
+                        <td>thumbs up/down/heart</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </body>
