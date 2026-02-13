@@ -29,9 +29,11 @@
                 src: url('./font/clear-sans/ClearSans-Thin.ttf');
             }    
             html{
-                background-color: #e5e5f7;
+                background-color: #faf0e6;
                 opacity: 1;
-                background: repeating-linear-gradient( -45deg, rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2) 3px, #e5e5f7 3px, #e5e5f7 60px );
+                background-image:  radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, #faf0e6 1.4000000000000001px);
+                background-size: 56px 56px;
+                background-position: 0 0,28px 28px;
             }
             body{
                 font-family: 'clearsans-regular';
@@ -47,7 +49,7 @@
                 place-items: center;
             }
             .content{
-                background-color: rgb(220, 220, 255);
+                background-color: linen;
                 border: 03px double blue;
                 width: 800px;
                 overflow:auto;
@@ -139,26 +141,9 @@
                 font-size: 16px;
                 margin: 20px;
                 text-indent: 40px;
+                color: rgba(0, 0, 0, 0.8);
             }
-            .img-left{
-                margin: 24px;
-                height: 300px;
-                width: 300px;
-                border: 3px double blue;
-            }
-            .float-right{
-                margin: 24px;
-                float: inline-end;
-                height: 300px;
-                width: 300px;
-                border: 3px double blue;
-            }
-            .img-center{
-                max-height: 300px;
-                max-width: 600px;
-                display: block;
-                border: 3px double blue;
-            }
+
             p{
                 word-spacing: 6px;
                 text-align: justify;
@@ -171,7 +156,8 @@
                 float: inline-start;
                 text-align: right;
                 font-size: 14px;
-                color: rgb(119, 119, 119);    
+                color: rgb(119, 119, 119);
+                
             }
             .image-right{
                 display: inline-flex;
@@ -191,9 +177,11 @@
                 text-align: right;
                 font-size: 14px;
                 color: rgb(119, 119, 119);
+                
             }
             img{
                 border: 3px double blue;
+                border-radius: 20px;
             }
         </style>
     </head>
@@ -203,39 +191,21 @@
                 <a href="/" class="title">Why Blog</a>
             </div>
             <div class="content vbox">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>
+                    I've always liked blogs. People's chosen representation of ideas online. The colors chosen, words, style, all of it. Some people want to be infortmative, other's personal, but all entertaining. And for years now I've thought about joining in too. But why? Not like I have an audience but that's fine. If only two or three friends enjoyed it, I think that's enough for me. Plus, it's like a blank canvas for my uncreative ass. I can feel like an artist.
 
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+Through the years I've ran into some cool sites: 
+	- doom site
+	- emo girl 
+	- motherfucking website 
 
-                <span class="image-left">
-                    <img src=".\img\femtan.png">
-                    Hello, this should float to the left!!
-                </span>
-                
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software likeLorem Ipsum is simply dummy text of the printing and 
-                <span class="image-left">
-                    <img src=".\img\femtan.png">
-                    to left
-                </span>
-                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p> 
-                
-                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+The last one especially is this sites mantra; simplicity and efficicny. I'm trying to avoid javasctipt usage for now but who knows, maybe I won't be able to resist if the functionality is cool enough. There's only so much css can do alone.   
 
-                <span class="image-right">
-                    <img src=".\img\femtan.png">
-                    to the right<br>oh look, a line break!
-                </span>
+Besides a simple, lightweight, fast site, I had to think what I want this place to *actually* be about. A personal blog of sorts open to the public? I guess that's what all blogs are but I don't want it to be a diary. An educational source of hidden knowledge? Ye right, you take me for a scholar. It should just be a place for those exploring me; people that want to know others, me. 
+^^ should i keep this
 
-                containing Lorem Ipsum passages, and more recently with desktop publishing software likeLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker</p>
 
-                <span class="image-center">
-                    <img src=".\img\prof4.png">
-                    Big'ol center image
-                </span>
-
-                <p>including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like</p>
+                </p>
             </div>
         </div>
     </body>

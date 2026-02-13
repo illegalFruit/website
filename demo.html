@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Bread is Delicious</title>
+        <link rel="icon" type="image/x-icon" href="./img/bread.ico">
+        <style>
+            @font-face {
+                font-family: 'clearsans-regular';
+                src: url('./font/clear-sans/ClearSans-Regular.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-italic';
+                src: url('./font/clear-sans/ClearSans-Italic.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-bold';
+                src: url('./font/clear-sans/ClearSans-Bold.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-bolditalic';
+                src: url('./font/clear-sans/ClearSans-BoldItalic.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-light';
+                src: url('./font/clear-sans/ClearSans-Light.ttf');
+            }
+            @font-face {
+                font-family: 'clearsans-thin';
+                src: url('./font/clear-sans/ClearSans-Thin.ttf');
+            }    
+            html{
+                background-color: #faf0e6;
+                opacity: 1;
+                background-image:  radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, #faf0e6 1.4000000000000001px);
+                background-size: 56px 56px;
+                background-position: 0 0,28px 28px;
+            }
+            body{
+                font-family: 'clearsans-regular';
+                margin: 0px;
+                padding: 69px 0px 69px 0px;
+            }
+            .center{
+                /* display: flex;
+                justify-content: center;
+                align-items: center;     
+                min-height: 300vh; */
+                display: grid;
+                place-items: center;
+            }
+            .content{
+                background-color: linen;
+                border: 03px double blue;
+                width: 800px;
+                overflow:auto;
+            }
+            li{
+                padding: 2px;
+                font-size: 24px;
+                color: blue;                
+                color: linen;
+                -webkit-text-stroke: 1px blue;
+            }
+            .date{
+                margin-top: 8px;
+                -webkit-text-stroke: 1px rgb(255, 132, 132);
+                font-size: 16px;
+                color: linen;
+                margin: 4px;
+            }
+            a {
+                color: blue;
+                -webkit-text-stroke: 0px blue;
+                text-decoration: none;
+                margin-left: 30px;
+                font-size: 30px;
+                margin-right: auto
+            }
+            a:visited{
+                color: rgb(120, 148, 240);
+            }
+            .updated {
+                font-family: 'clearsans-italic';
+                color: rgba(0, 0, 0, 0.5);
+            }
+            .vbox{
+                display: flex;
+                flex-direction: column; 
+            }
+            .hbox{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+            }
+            .spacer{
+                justify-content: space-between;
+            }
+            .hex{
+                position: absolute;
+                right: 24px;
+                top: -180px;
+            }
+            .title{
+                font-size: 42px;
+                font-family: 'clearsans-thin';
+                text-decoration: none;
+                color: blue;
+                position: relative;
+                margin-left: 0px;
+            }
+            .title:visited{
+                text-decoration: none;
+                color: blue;
+            }
+            .wrapper-hex{
+                position: relative;
+            }
+            .unavailable, .unavailable:visited{
+                color: grey;
+                text-decoration: none;
+                font-family: 'clearsans-thin';
+            }
+            .entry{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(255, 236, 210);
+                justify-content: flex-start;
+            }
+            .plain{
+                background-color: transparent;
+            }
+            .tag{
+                font-family: 'clearsans-thin';
+                font-size: 16px;
+                margin: 4px;
+                padding: 2px;
+                color: rgb(10, 3, 3);
+            }
+            p{
+                font-size: 16px;
+                margin: 20px;
+                text-indent: 40px;
+                color: rgba(0, 0, 0, 0.8);
+            }
+
+            p{
+                word-spacing: 6px;
+                text-align: justify;
+            }
+            .image-left{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px;
+                width: 400px;
+                float: inline-start;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);
+                
+            }
+            .image-right{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px;
+                width: 400px;
+                float: inline-end;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);  
+            }
+            .image-center{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 30px auto 30px auto;
+                width: 600px;
+                text-align: right;
+                font-size: 14px;
+                color: rgb(119, 119, 119);
+                
+            }
+            img{
+                border: 3px double blue;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body class="center">
+        <div class="vbox">
+            <div class="hbox spacer">
+                <a href="/" class="title">Why Blog</a>
+            </div>
+            <div class="content vbox">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+
+                <span class="image-left">
+                    <img src=".\img\femtan.png">
+                    Hello, this should float to the left!!
+                </span>
+                
+                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software likeLorem Ipsum is simply dummy text of the printing and 
+                <span class="image-left">
+                    <img src=".\img\femtan.png">
+                    to left
+                </span>
+                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p> 
+                
+                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+
+                <span class="image-right">
+                    <img src=".\img\femtan.png">
+                    to the right<br>oh look, a line break!
+                </span>
+
+                containing Lorem Ipsum passages, and more recently with desktop publishing software likeLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker</p>
+
+                <span class="image-center">
+                    <img src=".\img\prof4.png">
+                    Big'ol center image
+                </span>
+
+                <p>including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like</p>
+            </div>
+        </div>
+    </body>
+</html>
