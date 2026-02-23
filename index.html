@@ -3,6 +3,8 @@
     <head>
         <title>The Bread is Delicious</title>
         <link rel="icon" type="image/x-icon" href="./img/bread.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style>
             @font-face {
                 font-family: 'clearsans-regular';
@@ -202,15 +204,49 @@
             border: 1px double red;
             font-size: 22px;
         }
+
+        .icon-last-fm{
+            mask: url('img/svg2/lastfm-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon-youtube{
+            mask: url('img/svg2/youtube-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon-steam{
+            mask: url('img/svg2/steam-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon-discord{
+            mask: url('img/svg2/discord-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon-twitter{
+            mask: url('img/svg2/x-twitter-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon-instagram{
+            mask: url('img/svg2/instagram-brands-solid-full.svg');
+            height: 100%;
+        }
+        .icon{
+            min-width: 45px;
+            height: 45px;
+            border: solid 1px red;
+            border-radius: 3px;
+            background-color: linen;
+        }
+
         </style>
     </head>
+
 
     <body class="center">
         <div class="vbox">
             <div class="wip">This is a work in progress, okay? Be nice. (✿◠‿◠)</div>
             <div class="hbox spacer">
                 <a href="/" class="title">Home</a>
-                <div class="updated">last updated today</div>
+                <div class="updated">last updated WHENEVER HAHA</div>
             </div>
             <div class="content vbox">
                 <div class="entry">
@@ -251,15 +287,27 @@
             </div>
             <div class="center">
                 <div class="footer">
-                    <a class='contact' target="_blank" href="https://www.last.fm/user/floor2">LastFM</a>
-                    <a class='contact' target="_blank" href="https://www.youtube.com/@illegalFruitt/videos">Youtube</a>
-                    <a class='contact' target="_blank" href="https://steamcommunity.com/id/illegalFruitt/">Steam</a>
-                    <div class="discord-wrapper">
-                        <div id="ty">illegalfruit</div>
-                        <div id="ty2">Discord</div>
-                    </div>
-                    <a class='contact' target="_blank" href="https://x.com/illegalFruitt" style="font-size:22px; margin-right: 30px;">𝕏</a>
-                    <a class='contact' style="color:grey;" target="_blank" href="/">Instagram</a>
+                    <!-- /// LASTFM, YOUTUBE, STEAM, DISCORD, TWITTER, INSTAGRAM -->
+                    <a class="icon" href="#">
+                        <div class="icon-last-fm" style="background:red"></div>
+                    </a>
+                    <a class="icon" href="#">
+                        <div class="icon-youtube" style="background:red"></div>
+                    </a>
+                    <a class="icon" href="#">
+                        <div class="icon-steam" style="background:red"></div>
+                    </a>
+                    <a class="icon" href="#">
+                        <div class="icon-discord" style="background:red"></div>
+                    </a>
+                    <a class="icon" href="#">
+                        <div class="icon-twitter" style="background:red"></div>
+                    </a>
+                    <a class="icon" href="#">
+                        <div class="icon-instagram" style="background:red"></div>
+                    </a>
+
+
                 </div>
                 </div>
             </div>
