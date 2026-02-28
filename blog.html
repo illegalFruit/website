@@ -3,6 +3,8 @@
     <head>
         <title>The Bread is Delicious</title>
         <link rel="icon" type="image/x-icon" href="./img/bread.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style>
             @font-face {
                 font-family: 'clearsans-regular';
@@ -41,17 +43,19 @@
                 padding: 69px 0px 69px 0px;
             }
             .center{
-                /* display: flex;
-                justify-content: center;
-                align-items: center;     
-                min-height: 300vh; */
-                display: grid;
-                place-items: center;
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+            }
+            .vbox{
+                display: flex;
+                flex-direction: column;
+                margin: 1;
             }
             .content{
-                background-color: linen;
-                border: 03px double blue;
+                background-color: rgb(255, 236, 210);
+                border: 03px double red;
                 width: 800px;
+                min-height: 690px;
                 overflow:auto;
             }
             li{
@@ -59,7 +63,7 @@
                 font-size: 24px;
                 color: blue;                
                 color: linen;
-                -webkit-text-stroke: 1px blue;
+                -webkit-text-stroke: 1px red;
             }
             .date{
                 margin-top: 8px;
@@ -67,14 +71,14 @@
                 font-size: 16px;
                 color: linen;
                 margin: 4px;
+                margin-left: auto;
             }
             a {
                 color: blue;
-                -webkit-text-stroke: 0px blue;
+                -webkit-text-stroke: 0px red;
                 text-decoration: none;
                 margin-left: 30px;
                 font-size: 30px;
-                margin-right: auto
             }
             a:visited{
                 color: rgb(120, 148, 240);
@@ -82,10 +86,6 @@
             .updated {
                 font-family: 'clearsans-italic';
                 color: rgba(0, 0, 0, 0.5);
-            }
-            .vbox{
-                display: flex;
-                flex-direction: column; 
             }
             .hbox{
                 display: flex;
@@ -104,107 +104,60 @@
                 font-size: 42px;
                 font-family: 'clearsans-thin';
                 text-decoration: none;
-                color: blue;
+                color: red;
                 position: relative;
                 margin-left: 0px;
             }
             .title:visited{
                 text-decoration: none;
-                color: blue;
-            }
-            .wrapper-hex{
-                position: relative;
-            }
-            .unavailable, .unavailable:visited{
-                color: grey;
-                text-decoration: none;
-                font-family: 'clearsans-thin';
-            }
-            .entry{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                background-color: rgb(255, 236, 210);
-                justify-content: flex-start;
-            }
-            .plain{
-                background-color: transparent;
-            }
-            .tag{
-                font-family: 'clearsans-thin';
-                font-size: 16px;
-                margin: 4px;
-                padding: 2px;
-                color: rgb(10, 3, 3);
+                color: red;
             }
             p{
-                font-size: 16px;
+                font-size: 18px;
                 margin: 20px;
                 text-indent: 40px;
                 color: rgba(0, 0, 0, 0.8);
-            }
-
-            p{
-                word-spacing: 6px;
                 text-align: justify;
-            }
-            .image-left{
-                display: inline-flex;
-                flex-direction: column;
-                margin: 30px;
-                width: 400px;
-                float: inline-start;
-                text-align: right;
-                font-size: 14px;
-                color: rgb(119, 119, 119);
-                
-            }
-            .image-right{
-                display: inline-flex;
-                flex-direction: column;
-                margin: 30px;
-                width: 400px;
-                float: inline-end;
-                text-align: right;
-                font-size: 14px;
-                color: rgb(119, 119, 119);  
-            }
-            .image-center{
-                display: inline-flex;
-                flex-direction: column;
-                margin: 30px auto 30px auto;
-                width: 600px;
-                text-align: right;
-                font-size: 14px;
-                color: rgb(119, 119, 119);
-                
-            }
-            img{
-                border: 3px double blue;
-                border-radius: 20px;
             }
         </style>
     </head>
+
+
     <body class="center">
+        <!-- <a href="https://www.last.fm/user/floor2"><img src="https://lastfm-recently-played.vercel.app/api?user=floor2" height="auto" width="350px"/></a> -->
         <div class="vbox">
             <div class="hbox spacer">
-                <a href="/" class="title">Why Blog</a>
+                <a href="/" class="title">What the BLOG?</a>
+                <div class="updated">Why make a blog? Weeellllllllllllllllllll....</div>
             </div>
             <div class="content vbox">
                 <p>
                     I've always liked blogs. People's chosen representation of ideas online. The colors chosen, words, style, all of it. Some people want to be infortmative, other's personal, but all entertaining. And for years now I've thought about joining in too. But why? Not like I have an audience but that's fine. If only two or three friends enjoyed it, I think that's enough for me. Plus, it's like a blank canvas for my uncreative ass. I can feel like an artist.
-
-Through the years I've ran into some cool sites: 
-	- doom site
-	- emo girl 
-	- motherfucking website 
-
-The last one especially is this sites mantra; simplicity and efficicny. I'm trying to avoid javasctipt usage for now but who knows, maybe I won't be able to resist if the functionality is cool enough. There's only so much css can do alone.   
-
-Besides a simple, lightweight, fast site, I had to think what I want this place to *actually* be about. A personal blog of sorts open to the public? I guess that's what all blogs are but I don't want it to be a diary. An educational source of hidden knowledge? Ye right, you take me for a scholar. It should just be a place for those exploring me; people that want to know others, me. 
-^^ should i keep this
-
-
+                </p>
+                <p>
+                    Through the years I've ran into some cool sites: 
+                    <br>
+                        - doom site
+                    <br>
+                        - emo girl 
+                    <br>
+                        - motherfucking website 
+                </p>
+                <p>
+                    The last one especially is this sites mantra; simplicity and efficicny. I'm trying to avoid javasctipt usage for now but who knows, maybe I won't be able to resist if the functionality is cool enough. There's only so much css can do alone.   
+                </p>
+                <p>
+                    Besides a simple, lightweight, fast site, I had to think what I want this place to *actually* be about. A personal blog of sorts open to the public? I guess that's what all blogs are but I don't want it to be a diary. An educational source of hidden knowledge? Ye right, you take me for a scholar. It should just be a place for those exploring me; people that want to know others, me. 
+                    ^^ should i keep this
+                </p>
+                <p>
+                    Trying to figure out if i should even create a website or use a mixture of tumblr or something was a decision I'm not even sure was right.. But I'll know in time. 
+                </p>
+                <p>
+                    I think everyone has thoughts, ideas, that no one ever asks them about so they can never share. And thats what i want this to be, a place where i can show those interested in me, my mind. 
+                </p>
+                <p>
+                    filler<br>filler<br>filler<br>filler<br>filler<br>filler<br>filler<br>filler<br>filler<br>
                 </p>
             </div>
         </div>
