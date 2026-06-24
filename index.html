@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<html><head>
         <title>The Bread is Delicious</title>
         <link rel="icon" type="image/x-icon" href="./img/bread.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,6 +34,8 @@
                 background-image:  radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(rgba(250,0,0,1) 1.4000000000000001px, #faf0e6 1.4000000000000001px);
                 background-size: 56px 56px;
                 background-position: 0 0,28px 28px;
+                scrollbar-color: red rgba(255, 255, 255, 0);
+                scrollbar-width: thin;
             }
             body{
                 font-family: 'clearsans-regular';
@@ -72,6 +72,8 @@
                 color: linen;
                 margin: 4px;
                 margin-left: auto;
+                height: 30px;
+                rotate: 180deg;
             }
             a {
                 color: blue;
@@ -97,7 +99,7 @@
             }
             .hex{
                 position: absolute;
-                right: 24px;
+                right: 124px;
                 top: -180px;
             }
             .title{
@@ -119,14 +121,22 @@
                 color: grey;
                 text-decoration: none;
                 font-family: 'clearsans-thin';
+                width: 600px;
+                transform: translateX(-60px);
+                /* text-overflow: ellipsis;
+                white-space:nowrap;
+                overflow:hidden; */
             }
             .entry{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                
                 background-color: rgb(255, 236, 210);
+                background-size: 300px 10px;
                 justify-content: flex-start;
                 white-space: nowrap;
+                
             }
             .footer{
                 width: 400px;
@@ -239,6 +249,54 @@
         #twitch{
             background-color: linen;
         }
+        .year-title{
+            align-items: center;
+            justify-content: center;
+        }
+        .end-list-spacer{
+            min-height: 100px;
+        }
+        .gauss-effect{
+            position: absolute;
+            top: -104px;
+            left: 4px;
+            width: 785px;
+            height: 100px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(250, 240, 230, 1) 80%);
+        }
+        .rating{
+            margin: auto;
+        }
+        .category{
+            width: 45px;
+            height: 40px;
+        }
+        .blog-fade{ /* blog */
+            background: linear-gradient(90deg,#c09173 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .cinema-fade{ /* show/movie */
+            background: linear-gradient(90deg,#7a594f 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .vidya-fade{ /* videogame */
+            background: linear-gradient(90deg,#dfb386 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .side-panel{
+            display: flex;
+            position: absolute;
+            height: 200px;
+            border: 1px solid red;
+            transform: translate(-140px, 250px);
+            flex-direction: column;
+            align-items: flex-end;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        .side-panel div{
+            margin: 04px;
+            background-color: red;
+        }
+
+
         </style>
     </head>
 
@@ -246,47 +304,822 @@
     <body class="center">
         <!-- <a href="https://www.last.fm/user/floor2"><img src="https://lastfm-recently-played.vercel.app/api?user=floor2" height="auto" width="350px"/></a> -->
         <div class="vbox">
-            <div class="wip">This is a work in progress, okay? Be nice. (✿◠‿◠)<br>Below are ideas for entries that're yet to exist!</div>
+            <div class="wip">Just some things I've done (✿◠‿◠)</div>
             <div class="hbox spacer">
                 <a href="/" class="title">Home</a>
                 <div class="updated">last updated WHENEVER HAHA</div>
+                <div class="side-panel">
+                    <div>cinema</div>
+                    <div>games</div>
+                    <div>blog</div>
+                </div>
             </div>
             <div class="content vbox">
+                <div class="entry year-title">
+                    <a class="unavailable" href="/">---2023---</a>
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">a Digital Nomad's Photo Album</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable " href="/">Vinland Saga Season 2</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">Internet Friends</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Trigun Stampede</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">2023 Recap</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Ghost in the Shell: Stand Alone Complex/ 2nd GIG</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
                 <div class="entry">
-                    <a href="/" class="unavailable">Why Blog</a>
-                    <div class="tag-wrapper">
-                        <!-- <div class="tag-base tag-wip">WIP</div> -->
-                    </div>
-                    <div class="date">01/19/26</div></div>
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Ranking of Kings!</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">What <i>is</i> a Profile?</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Cave Story</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">2025 Recap</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Monitor Upgrade 1440p</a>
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">Videogames I Still Think About</a>
-                    <div class="date">1/X/C</div></div>
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Black Mesa</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">2024 Recap</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Winnipeg, Canada</a>
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">Talk, Talk, Talk</a>
-                    <div class="date">-/-/-</div></div>
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Collapse of Rumbleverse</a>
+                </div>
                 <div class="entry">
-                    <a class='unavailable' href="/">It's a Process</a>
-                    <div class="date">a/b/c</div></div>
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">The Beginners Guide</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Disco Elysium</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Rust</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">TI Ticket Prices</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">System Shock 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Memories (1995)</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Tried a Monster Energy</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Mononoke</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Godot TTS</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">The Witness</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Scott Pilgrim Takes Off</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Roboquest</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Noita</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Lethal Company</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Blue Eye Samurai</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry year-title">
+                    <a class="unavailable" href="/">---2024---</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Signalis</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Firewatch</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dead Island 2 (revisited)</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Risk of Rain Returns</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Northern Journey</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Mouthwashing Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">YOMI Hustle</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Undertale Yellow</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Warhammer 40,000: Boltgun</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">The Forgotten City</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Deus Ex</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Adios</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Prey</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Portal Revolution</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Mordhau</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Borderlands 3</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dark and Darker</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Exhaust Manifold</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Cry of Fear</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Outer Wilds - Echoes of the Eye</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Bioshock 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Friends vs Friends</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Celeste</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Control</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Delicious is Dungeon</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Dead Dead Demon's Dededede Destruction</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Alien Isolation</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Friends vs Friends Duo Tournament</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Dandadan</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">STRAFTAT</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Smiling Friends Season 1,2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Arcane Season 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">No One Lives Under the Lighthouse</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Lunacid</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dread Deluion</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Cursed Halo</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Decieve Inc</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry year-title">
+                    <a class="unavailable" href="/">---2025---</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">DEVOTION</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Looking Back</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Bloodborne</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Gun Range</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">The Substance</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Winnipeg, Again</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Medal of Honor: Frontline</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Mortal Shell</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Due Process</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Rainworld</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Blue Prince</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Ena Dream BBQ</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Balatro</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dark Souls Seemless Co-op</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Scavengers Reign</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Severance Season 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Common Side Effects</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Sekiro</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Deathloop</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Invincible Season 1,2,3</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Resident Evil HD Remaster</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Challengers</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Path of Exile Trickster Hardcore</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Stalker Gamma</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Tarkov Arena</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Darkwood</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Straftat 2v2</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Peak</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">The Wire</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">The Midnight Gospel</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Street Fighter 6</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Deadlock</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Alan Wake 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">The Witcher 3: Wild Hunt</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dead Island 2 (revisited, again)</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">HIM</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Weapons</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Oil & Filter Change</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">True Detective Season 1</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Vampire Survivor</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Kick Heart</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Little Miss Sunshine</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Grandpa</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Full Metal Jacket</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Time Splitters Rewind</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Bugonia</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Ghost in the Shell 2 Innocence</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Interstellar</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Smiling Friends Season 3</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">The Bear</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Myst</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Descanso Gardens</a>
+                </div>
+                <div class="entry year-title">
+                    <a class="unavailable" href="/">--2026--</a>
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">A Big Cruise Adventure</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">V Rising</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Milk Inside a Bag of Milk Inside a Bag...</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Deadlock - Old Gods New Blood Update</a>
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Manually Grinding Coffee Beans</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Butcher's Creek Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Chainsaw Man - The Movie: Reze Arc</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Tokyo Godfathers</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Flat Tire</a>
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Millenial Actoress</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Frog Squad Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Austin Powers: International Man of Mystery</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Fullmetal Alchemist the Movie: Conqueror of Shamballa</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Nine Inch Nails Concert</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Deltarune Chapter 3,4</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Baths Concert</a>
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Fourloco, ZYN</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Silent Hill 3</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Steel Ball Run Episode 1</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">No Other Choice</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Milk Outside a Bag of Milk</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Rift Fishing Demo</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Zero Paradise Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">The Seance of Blake Manor Demo</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Blood Donation</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Burglin Gnomes Demo</a>                    
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                    <!-- <img class='date' src="angle-right-solid-full.svg"> -->
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Riven</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Berserk (1997)</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Stranger of Paradise</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Marathon</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">We Gotta Go! Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Outbound Demo</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">FriendOS Demo</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Xavier Renegade Angel</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category blog-fade"></div>
+                    <a class="unavailable" href="/">Panchiko Concert</a>
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Voices of the Void</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Tony Hawk's Pro Skater 3,4</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Ball x Pit</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Mixtape</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Trepang 2</a>
+                    <img class='rating' src="img\svg2\icon-thumb-down.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Invincible Season 4</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Alice: Madness Returns</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a href="/" class="unavailable">Superliminal</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Indika</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Fullmetal Alchemist: The Sacred Star of Milos</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Dredge</a>
+                    <img class='rating' src="img\svg2\icon-thumb-up.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">ROUTINE</a>
+                    <img class='rating' src="img\svg2\icon-favorite.svg">
+                </div>
+                <div class="entry">
+                    <div class="category vidya-fade"></div>
+                    <a class="unavailable" href="/">Demon Souls</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+                <div class="entry">
+                    <div class="category cinema-fade"></div>
+                    <a class="unavailable" href="/">Past Lives</a>
+                    <img class='rating' src="img\svg2\icon-mid.svg">
+                </div>
+
+                <div class="entry end-list-spacer">
+                    <a class="unavailable" href="/"></a>
+                </div>
             </div>
             <div class="wrapper-hex">
+                <div class="gauss-effect"></div>
                 <div class="hex">
                     <img src="./img/transparency.gif" style="width:169px;height:169px;">
                 </div>
@@ -297,7 +1130,7 @@
                     <a class="icon" href="https://www.last.fm/user/floor2" target="_blank">
                         <div class="icon-last-fm" style="background:rgb(255, 47, 47)"></div>
                     </a>
-                    <a class="icon" href="https://www.youtube.com/@illegalFruitt" v>
+                    <a class="icon" href="https://www.youtube.com/@illegalFruitt" v="">
                         <div class="icon-youtube" style="background:red"></div>
                     </a>
                     <a class="icon" href="https://steamcommunity.com/id/illegalFruitt/" target="_blank">
@@ -306,15 +1139,15 @@
                     <!-- <a class="icon" href="#">
                         <div class="icon-discord" style="background:red"></div>
                     </a> -->
-                    <a class="icon" href="https://x.com/illegalFruitt" target="_blank">
+                    <!-- <a class="icon" href="https://x.com/illegalFruitt" target="_blank">
                         <div class="icon-twitter" style="background:red"></div>
-                    </a>
+                    </a> -->
                     <a class="icon" href="https://www.instagram.com/floorporium/" target="_blank">
                         <div class="icon-instagram" style="background:red"></div>
                     </a>
                 </div>
             </div>
             </div>
-        </div>
-    </body>
-</html>
+        
+    
+</body></html>
