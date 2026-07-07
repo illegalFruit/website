@@ -1,0 +1,20 @@
+{
+    "0":{   
+        "category": "movie",
+        "title": "helo",
+        "rating": "love",
+        "comment": "just some comment about the media or not"
+    },
+    "1":{
+        "category": "movie",
+        "title": "helo2",
+        "rating": "like",
+        "comment": "just some comment about the media or not"
+    },
+    "2":{
+        "category": "videogame",
+        "title": "videogame title name!",
+        "rating": "hate",
+        "comment": "just some comment about the media or not"
+    }
+}
